@@ -1,10 +1,12 @@
 📊 Facebook Engagement Data EDA Mini Project.
 
 
+
 📘 Overview
 
 This project explores Facebook user engagement data using Exploratory Data Analysis (EDA) to uncover patterns in user activity, demographics, and engagement metrics.
 It provides insights into how factors like age, account type, country, and verification status influence engagement levels.
+
 
 
 🎯 Objectives
@@ -18,6 +20,7 @@ Explore relationships between engagement metrics — likes, comments, shares, po
 Compare engagement between verified vs. non-verified users.
 
 Determine which account types and countries show the highest engagement.
+
 
 
 🧩 Dataset Description
@@ -38,6 +41,9 @@ shares_count	Total shares received
 is_verified	Whether the account is verified
 account_type	Type of account (Business, Personal, Creator)
 engagement_rate	Calculated engagement percentage
+
+
+
 📈 Key Insights
 
 📊 Engagement Overview
@@ -58,10 +64,11 @@ Highest verified user rates in UK, Brazil, and India.
 
 Strong overall engagement in Canada, Australia, and Germany.
 
-
 🔵 Verification Insights
 
 Verified users don’t always get more engagement — the difference is minor.
+
+
 
 🧠 Technologies Used
 
@@ -74,6 +81,7 @@ Verified users don’t always get more engagement — the difference is minor.
 🧾 Jupyter Notebook – analysis environment
 
 
+
 📊 Visualizations
 
 Histogram of Age Distribution
@@ -83,6 +91,8 @@ Bar Plot of Account Type Engagement
 Country-wise Verification Rate
 
 Top 5 Active Users by Engagement
+
+
 
 🏁 Conclusion
 
