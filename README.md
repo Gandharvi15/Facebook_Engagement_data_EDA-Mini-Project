@@ -1,102 +1,97 @@
-📊 Facebook Engagement Data EDA Mini Project.
 
+# 📊 Facebook User Engagement Analysis (EDA)
 
+This project performs **Exploratory Data Analysis (EDA)** on Facebook user engagement data to uncover patterns, trends, and relationships among metrics such as likes, comments, shares, and post types.
+It helps understand what drives higher engagement on Facebook content.
 
-📘 Overview
+---
 
-This project explores Facebook user engagement data using Exploratory Data Analysis (EDA) to uncover patterns in user activity, demographics, and engagement metrics.
-It provides insights into how factors like age, account type, country, and verification status influence engagement levels.
+## 🧠 Project Overview
 
+Social media engagement is a key indicator of audience interaction and content performance.
+This project analyzes a Facebook user engagement dataset to identify the factors that influence engagement and how different types of content perform across metrics.
 
+The EDA focuses on:
 
-🎯 Objectives
+* Understanding distribution and trends in engagement metrics.
+* Identifying correlations between variables.
+* Detecting outliers and unusual engagement behaviors.
+* Deriving insights that can help optimize social media strategies.
 
-Analyze and visualize user engagement trends across various factors.
+---
 
-Identify outliers and clean inconsistent data (age, country, account type).
+## 🗂️ Dataset Description
 
-Explore relationships between engagement metrics — likes, comments, shares, posts.
+The dataset (e.g., `facebook_user_engagement.csv`) contains Facebook post-level information such as:
 
-Compare engagement between verified vs. non-verified users.
+| Column                                    | Description                                           |
+| ----------------------------------------- | ----------------------------------------------------- |
+| **Post_ID**                               | Unique identifier for each post                       |
+| **Type**                                  | Post type (Photo, Status, Video, Link)                |
+| **Category**                              | Category of post (e.g., Entertainment, News, Product) |
+| **Page_Total_Likes**                      | Total likes on the page at time of posting            |
+| **Post_Month / Post_Weekday / Post_Hour** | Time-related metadata                                 |
+| **Paid**                                  | Whether the post was sponsored (1 = Yes, 0 = No)      |
+| **Lifetime_Post_Total_Reach**             | Number of people reached                              |
+| **Lifetime_Post_Total_Impressions**       | Total number of times the post was seen               |
+| **Lifetime_Engaged_Users**                | Users who engaged with the post                       |
+| **Lifetime_Post_Consumers**               | Users who clicked on post content                     |
+| **Comment / Like / Share**                | Engagement metrics                                    |
 
-Determine which account types and countries show the highest engagement.
+*(Columns may vary slightly depending on dataset version.)*
 
+---
 
+## ⚙️ Technologies & Libraries
 
-🧩 Dataset Description
+* **Language:** Python 
+* **Libraries Used:**
 
-The dataset contains user-level engagement metrics with the following columns:
+  * `pandas` – data manipulation
+  * `numpy` – numerical operations
+  * `matplotlib` & `seaborn` – data visualization
+  * `plotly` – interactive charts (optional)
 
-Column| Name	|Description
-user_id	Unique identifier for each user
-age	User’s age
-gender	Gender of the user
-country	Country of residence
-num_friends	Number of friends
-num_followers	Number of followers
-posts_count	Total posts made
-likes_received	Total likes received
-comments_received	Total comments received
-shares_count	Total shares received
-is_verified	Whether the account is verified
-account_type	Type of account (Business, Personal, Creator)
-engagement_rate	Calculated engagement percentage
+---
 
+## 🔍 EDA Process
 
+### 1️⃣ Data Cleaning
 
-📈 Key Insights
+* Handle missing values and data inconsistencies.
+* Remove duplicates and incorrect data points.
 
-📊 Engagement Overview
+### 2️⃣ Data Understanding
 
-Avg. Likes: 24,682, Comments: 5,049, Shares: 2,977, Posts: 152
+* Inspect structure using `.info()` and `.describe()`.
+* Check data types and statistical summaries.
 
-Most users are aged 40–55, showing peak activity among middle-aged users.
+### 3️⃣ Univariate Analysis
 
-👥 Account Type Analysis
+* Distribution of likes, comments, and shares.
+* Most common post types and posting times.
 
-Personal accounts have the highest engagement (~54.9%).
+### 4️⃣ Bivariate & Multivariate Analysis
 
-Business and Creator accounts perform slightly lower.
+* Correlation between reach, impressions, and engagement.
+* Engagement comparison across post types and categories.
+* Time-based analysis (day vs. engagement).
 
-🌍 Country Trends
+### 5️⃣ Outlier Detection
 
-Highest verified user rates in UK, Brazil, and India.
+* Boxplots and IQR method to detect unusually high or low engagement posts.
 
-Strong overall engagement in Canada, Australia, and Germany.
+### 6️⃣ Insights Visualization
 
-🔵 Verification Insights
+* Bar plots, pie charts, histograms, and heatmaps to visualize relationships.
 
-Verified users don’t always get more engagement — the difference is minor.
+---
 
+## 📈 Key Insights
 
-
-🧠 Technologies Used
-
-🐍 Python 3.x
-
-📦 Pandas, NumPy – data cleaning & transformation
-
-📊 Matplotlib, Seaborn – data visualization
-
-🧾 Jupyter Notebook – analysis environment
-
-
-
-📊 Visualizations
-
-Histogram of Age Distribution
-
-Bar Plot of Account Type Engagement
-
-Country-wise Verification Rate
-
-Top 5 Active Users by Engagement
-
-
-
-🏁 Conclusion
-
-This project highlights how user demographics, account type, and region influence engagement behavior on Facebook.
-The findings can assist in improving content strategy, targeting audiences, and understanding platform engagement dynamics.
-
+* **Photo posts** tend to get the highest engagement.
+* **Sponsored (Paid) posts** generally reach more users but don’t always have the highest engagement.
+* Engagement is **highest during weekdays**, especially around **evening posting hours**.
+* There’s a **strong positive correlation** between impressions and engagement metrics.
+* **Outlier posts** often indicate viral content or marketing campaigns.
 
